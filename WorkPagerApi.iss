@@ -1,6 +1,6 @@
 ; Script ajustado para instalar WorkPagerApi como serviço
 #define MyAppName "WorkPagerApi"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.0.0"
 #define MyAppExeName "Pager.Api.exe"
 
 [Setup]
@@ -9,13 +9,13 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher="DBM"
 DefaultDirName=C:\WorkPagerApi
-SetupIconFile=C:\worksystem\DESENVOLVIMENTO\PagerAPI\pagerApi.ico
+SetupIconFile=C:\DBM\COMPILADOS\pagerApi.ico
 UninstallDisplayIcon={app}\pagerApi.ico
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
-OutputDir=C:\worksystem\INSTALADORES
+OutputDir=C:\DBM\INSTALADORES
 OutputBaseFilename=WorkPagerApi-Setup
 SolidCompression=yes
 WizardStyle=modern
@@ -25,8 +25,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
 [Files]
-Source: "C:\worksystem\DESENVOLVIMENTO\PagerAPI\pagerApi.ico"; DestDir: "{app}"
-Source: "C:\worksystem\DESENVOLVIMENTO\PagerAPI\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\DBM\COMPILADOS\pagerApi.ico"; DestDir: "{app}"
+Source: "C:\DBM\COMPILADOS\COMPILADOS\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Run]
 ; Tenta parar o serviço (se existir)
