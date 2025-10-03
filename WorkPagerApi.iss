@@ -41,3 +41,11 @@ Filename: "sc"; Parameters: "create WorkPagerApi binPath= ""{app}\Pager.Api.exe"
 ; Inicia o serviço
 Filename: "sc"; Parameters: "start WorkPagerApi"; Flags: runhidden
 
+[UninstallRun]
+; Para o serviço durante a desinstalação
+Filename: "sc"; Parameters: "stop WorkPagerApi"; Flags: runhidden skipifdoesntexist
+
+; Remove o serviço durante a desinstalação
+Filename: "sc"; Parameters: "delete WorkPagerApi"; Flags: runhidden skipifdoesntexist
+
+
